@@ -12,6 +12,7 @@
   justify-content: space-between;
 }
 
+/* header contains logo and title */
 .header {
   height: 4rem;
   width: 100%;
@@ -29,10 +30,10 @@
   height: 3rem;
   width: 3rem;
 
-  /* original image */
+  /* original image of black chatter icon */
   /* background-image: url("https://icon-library.com/images/chat-icon-white/chat-icon-white-5.jpg"); */
   
-  /* modified image */
+  /* modified image: white chatter icon */
   background-image: url(../chat-icon-white.png);
   background-position: center;
   background-size: cover;
@@ -53,6 +54,7 @@
   margin-left: 0.5rem;
 }
 
+/* contains text input and send button */
 .footer {
   height: 4rem;
   width: 100%;
@@ -73,6 +75,7 @@
   /* added margin */
   margin: 1.5rem;
   padding: 0 1rem;
+  /* transparent black background */
   background: rgba(0, 0, 0, 0.5);
   color: white;
   font-weight: bold;
