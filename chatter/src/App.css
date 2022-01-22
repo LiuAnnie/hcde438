@@ -1,0 +1,89 @@
+.App {
+  height: 100vh;
+
+  /* former background */
+  /* background: rgb(145, 154, 255); */
+
+  /* gradient background */
+  background-image: linear-gradient(to right, #0044ff , #ff00d4);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  height: 4rem;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  border-bottom: 3px solid white;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.logo {
+  height: 3.5rem;
+  width: 3.5rem;
+
+  /* original image */
+  /* background-image: url("https://icon-library.com/images/chat-icon-white/chat-icon-white-5.jpg"); */
+  
+  /* modified image */
+  background-image: url(../chat-icon-white.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  /* remove circular radius
+  border-radius: 50%; */
+
+  /* border: 1px solid white; */ 
+}
+
+.title {
+  /* white text */
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  margin-left: 0.5rem;
+}
+
+.footer {
+  height: 4rem;
+  width: 100%;
+  /* border-top: 2px solid white; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* padding: 0 1rem; */
+  background: rgba(255, 255, 255, 0.3);
+  position: relative;
+}
+
+.text-input {
+  height: 2rem;
+  width: 100%;
+  border: 3px solid white;
+  border-radius: 1rem;
+  /* added margin */
+  margin: 1.5rem;
+  padding: 0 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-weight: bold;
+}
+
+.send {
+  background: white;
+  color: #0044ff;
+  border-radius: 1rem;
+  border: none;
+  height: 1.4rem;
+  width: 3.5rem;
+  position: absolute;
+  right: 2rem;
+  cursor: pointer;
+  font-size: .7rem;
+}

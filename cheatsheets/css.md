@@ -92,19 +92,31 @@ img {
 - `align-items` aligns opposite the direction axis
 - `justify-content`: aligns items on the direction axis
 
-### response CSS
+### responsive CSS
 ```css
-html { /* MOBILE */
+/* MOBILE */
+html {
   font-size: 15px;
 }
+
+/* TABLET */
 @media (min-width: 400px) {
-  html { /* TABLET */
+  html { 
     font-size: 18px;
   }
 }
+
+/* DESKTOP */
 @media (min-width: 768px) {
-  html { /* DESKTOP */
+  html {
     font-size: 21px;
+  }
+}
+
+/* EXTRA LARGE */
+@media only screen and (min-width:1024px){
+  html {
+      font-size: 26px;
   }
 }
 ```
