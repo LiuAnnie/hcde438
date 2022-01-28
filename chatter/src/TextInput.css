@@ -1,0 +1,40 @@
+/* contains text input and send button */
+.footer {
+    height: 4rem;
+    width: 100%;
+    /* border-top: 2px solid white; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* padding: 0 1rem; */
+    background: rgba(255, 255, 255, 0.3);
+    position: relative;
+  }
+  
+  .text-input {
+    height: 2.5rem;
+    width: 100%;
+    border: 3px solid white;
+    border-radius: 2rem;
+    /* added margin */
+    margin: 1.5rem;
+    padding: 0 1rem;
+    /* transparent black background */
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-weight: bold;
+  }
+  
+  .send {
+    height: 2rem;
+    width: 3.5rem;
+    background: white;
+    color: #0044ff;
+    /* curved corners */
+    border-radius: 2rem;
+    border: none;
+    position: absolute;
+    right: 2rem;
+    cursor: pointer;
+    font-size: 1rem;
+  }
