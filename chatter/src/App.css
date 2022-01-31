@@ -1,9 +1,6 @@
 .App {
   height: 100vh;
 
-  /* former background */
-  /* background: rgb(145, 154, 255); */
-
   /* gradient background */
   background-image: linear-gradient(to right, #0044ff , #ff00d4);
 
@@ -17,10 +14,10 @@
   height: 4rem;
   width: 100%;
 
-  /* transparent white background */
+  /* transparent white background and bottom white border*/
   background: rgba(255, 255, 255, 0.3);
-
   border-bottom: 3px solid white;
+
   display: flex;
   align-items: center;
   padding: 0.5rem 0rem;
@@ -29,6 +26,8 @@
 .logo {
   height: 3rem;
   width: 3rem;
+
+  /* space between logo and edge of screen */
   margin-left: 1rem;
 
   /* original image of black chatter icon */
@@ -39,11 +38,6 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-
-  /* remove circular radius
-  border-radius: 50%; */
-
-  /* border: 1px solid white; */ 
 }
 
 .title {
@@ -51,26 +45,41 @@
   color: white;
   font-weight: bold;
   font-size: 2rem;
+
   /* use margin so that text isn't too close to logo */
   margin-left: 0.5rem;
 }
 
+/* organizing the array of messages */
 .messages {
   display: flex;
+
+  /* new messages appear at bottom */
   flex-direction: column-reverse;
-  align-items: flex-start;
+
+  /* changed this from flex-start to flex-end, because normally when i 
+  send messages, it appears on the right-hand side ! */
+  align-items: flex-end;
   overflow: auto;
+
+  /* height of messaging area on app */
   max-height: calc(100vh - 5rem - 5rem);
   min-height: calc(100vh - 5rem - 5rem);
+
+  /* using padding to buffer message from edge of screen */
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
+/* single message bubble */
 .message {
   color: white;
   background: rgba(0, 0, 0, 0.55);
-  padding: 0.5rem 1rem;
-  margin: 0.2rem;
   border-radius: .8rem;
+  border-bottom-right-radius: 0%;
+  box-shadow: 10px 5px 5px rgba(255, 255, 255, 0.8);
+  padding: 0.5rem 1rem;
   margin: 0.5rem;
+  /* to distinguish who sent which message */
+  max-width: 75%;
 }

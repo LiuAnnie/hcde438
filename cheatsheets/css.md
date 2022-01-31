@@ -149,3 +149,15 @@ Using "transform" or "opacity" for animations makes your application WAY more pe
   }
 }
 ```
+
+**general styling**
+```css
+.message {
+  color: white; /* text color */
+  background: rgba(0, 0, 0, 0.55); /* red, green, blue, opacity */
+  padding: 0.5rem 1rem;
+  margin: 0.2rem;
+  border-radius: .8rem; /* use border-radius for rounded corners */
+  margin: 0.5rem;
+}
+```

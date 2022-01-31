@@ -5,11 +5,13 @@ import { useState } from "react";
 function TextInput(props) {
     const [text, setText] = useState("");
 
+    // send message and reset text input
     function send() {
         props.sendMessage(text);
-        setText("");
+        setText("");    // resets text input
     }
 
+    // if user hits 'enter' key, send message
     function onKeyPress(e) {
         if (e.key === "Enter") {
             send();
