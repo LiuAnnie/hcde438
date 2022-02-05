@@ -14,10 +14,14 @@
   .text-input {
     height: 2.5rem;
     width: 100%;
+    /* making room */
+    /* width:calc(100% - 210px); */
     border: 3px solid white;
     border-radius: 2rem;
     /* added margin */
     margin: 1.5rem;
+    /* experimenting */
+    /* margin: 1.5rem 0rem 1.5rem 4.25rem; */
     padding: 0 1rem;
     /* transparent black background */
     background: rgba(0, 0, 0, 0.5);
@@ -33,8 +37,33 @@
     /* curved corners */
     border-radius: 2rem;
     border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     right: 2rem;
     cursor: pointer;
     font-size: 1rem;
+  }
+
+  .send:hover {
+    background: #0044ff;
+    color: white;
+  }
+
+  .camera {
+    height: 2.5rem;
+    width: 2.5rem;
+    background: white;
+    color: #ff00d4;
+    /* curved corners */
+    border-radius: 2rem;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 1rem;
   }
