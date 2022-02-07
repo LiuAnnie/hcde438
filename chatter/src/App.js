@@ -46,6 +46,8 @@ function App() {
   function updateName(name) {
     // if no name was typed in, don't update name
     if (!name) return;
+    // update user
+    userName(name);
     // log name to console
     console.log(name);
   }
@@ -56,16 +58,13 @@ function App() {
       <header className="header">
         <div className="logo" />
         <span className="title">chatter</span>
-
-        {/* <NamePicker set={userName}/> */}
-        <NamePicker updateName={updateName}/>
+        <NamePicker updateName={updateName} />
       </header>
       <div className="messages">
         {messages.map((msg, i) => {
           return <Message {...msg} key={i} />;
         })}
       </div>
-      {/* unsure about why the following line doesn't work when i used 'sendMessage={text=> props.onSend(text)}' over 'sendMessage={sendMessage}' */}
       <TextInput sendMessage={sendMessage}
         showCamera={() => setShowCamera(true)}
       />
