@@ -5,6 +5,7 @@ import Message from "./Message";
 import React from 'react';
 // import {EuiButton} from '@elastic/eui';
 import Camera from 'react-snap-pic';
+import NamePicker from './NamePicker';
 
 // this is a Component call App
 function App() {
@@ -17,6 +18,9 @@ function App() {
   // "setShowCamera" is a function to update "showCamera"
   const [showCamera, setShowCamera] = useState(false);
 
+  // "userName" is a function to update "user"
+  const [user, userName] = useState([]);
+
   function sendMessage(text) {
     // make sure text was typed in, so we don't send in empty bubbles
     if (!text) return;
@@ -24,7 +28,7 @@ function App() {
     const newMessage = {
       text,
       time: Date.now(),
-      user: "Annie"
+      user: user
     };
     // add new message to beginning of array
     setMessages([newMessage, ...messages]);
@@ -32,9 +36,18 @@ function App() {
   // log messages array in console to keep track
   console.log(messages);
 
+
   function takePicture(img) {
+    // log image to console to keep track
     console.log(img);
     setShowCamera(false);
+  }
+
+  function updateName(name) {
+    // if no name was typed in, don't update name
+    if (!name) return;
+    // log name to console
+    console.log(name);
   }
 
   return (
@@ -43,13 +56,9 @@ function App() {
       <header className="header">
         <div className="logo" />
         <span className="title">chatter</span>
-        {/* need to style button */}
-        {/* <EuiButton 
-        color={"accent"} 
-        onClick={() => { }} 
-        >
-          THIS IS A BUTTON!
-        </EuiButton> */}
+
+        {/* <NamePicker set={userName}/> */}
+        <NamePicker updateName={updateName}/>
       </header>
       <div className="messages">
         {messages.map((msg, i) => {
